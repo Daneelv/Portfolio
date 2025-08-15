@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-// import myImg from "../../Assets/avatar.svg";
 import myImg from "../../Assets/profile.jpeg";
 import Tilt from "react-parallax-tilt";
-
+// import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -17,8 +17,8 @@ function Home2() {
               LET ME <span className="blue"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I fell in love with programming and, along the way, I’ve learned a
-              thing or two… I think 🤷‍♂️
+              I fell in love with programming and have spent years turning ideas
+              into functional, efficient applications.
               <br />
               <br />
               I’m fluent in
@@ -32,13 +32,13 @@ function Home2() {
               <br />
               <br />
               My main focus is creating modern web and mobile applications,
-              delivering high-performance, maintainable code, and exploring new
-              technologies and products.
-              <br />
-              <br />
-              🎓 BSc in Computer Systems — Heriot-Watt University, UK <br />
-              🌍 Based in Cape Town, South Africa
+              delivering high-performance, maintainable code.
             </p>
+            <Link to="/about">
+              <button className="btn btn-outline-primary">
+                <span className="blue">More About Me</span>
+              </button>
+            </Link>
           </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
@@ -77,17 +77,6 @@ function Home2() {
                   <FaLinkedinIn />
                 </a>
               </li>
-              {/* Instagram */}
-              {/* <li className="social-icons">
-                <a
-                  href=""
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiFillInstagram />
-                </a>
-              </li> */}
             </ul>
           </Col>
         </Row>
