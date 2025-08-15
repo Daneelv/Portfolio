@@ -31,7 +31,7 @@ button:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 999999;
+  z-index: 10;
   background-color: rgb(5, 5, 19);
   background-image: url(./Assets/pre.svg);
   background-repeat: no-repeat;
@@ -87,6 +87,7 @@ button:focus {
   transition: all 0.3s ease-out 0s !important;
   padding: 0.3rem 2rem !important;
   font-size: 1.2rem !important;
+  z-index: 1 !important;
 }
 
 .navbar-toggler {
@@ -97,7 +98,7 @@ button:focus {
 
 .navbar-toggler span {
   display: block !important;
-  background-color: --imp-text-color !important;
+  background-color: var(--imp-text-color) !important;
   height: 4px !important;
   width: 27px !important;
   margin-top: 5px !important;
@@ -157,6 +158,13 @@ button:focus {
 .logo {
   height: 5em !important;
   width: 15em !important;
+}
+
+@media (max-width: 767px) {
+  .logo {
+    height: 4em !important;
+    width: 8em !important;
+  }
 }
 
 .navbar-nav .nav-link {
@@ -248,6 +256,7 @@ button:focus {
   background-size: cover !important;
   width: 100%;
   height: 100%;
+  z-index: -1 !important;
 }
 
 .home-header {
@@ -256,7 +265,7 @@ button:focus {
 
 .home-section {
   position: relative;
-  z-index: -1;
+  z-index: 0;
   background-position: top center;
   background-repeat: no-repeat;
   padding-bottom: 30px !important;
@@ -651,7 +660,7 @@ button:focus {
 .resume .resume-item {
   padding: 0 0 10px 25px;
   margin-top: -2px;
-  border-left: 2px solid --imp-text-color;
+  border-left: 2px solid var(--imp-text-color);
   position: relative;
 }
 
@@ -688,7 +697,7 @@ button:focus {
   left: -9px;
   top: 0;
   background: #fff;
-  border: 2px solid --imp-text-color;
+  border: 2px solid var(--imp-text-color);
 }
 
 .like-item {
@@ -741,9 +750,106 @@ button:focus {
 
 .fork-btn-inner:hover {
   transform: translateY(-2px) !important;
-  background-color: --imp-text-color !important;
-  border-color: --imp-text-color !important;
+  background-color: var(--imp-text-color) !important;
+  border-color: var(--imp-text-color) !important;
 }
 .fork-btn-inner::after {
   display: none !important;
+}
+
+/* --------- */
+/* Contact section */
+/* --------- */
+
+.contact-header {
+  padding-top: 80px !important;
+}
+
+.contact-section {
+  position: relative;
+  z-index: 1;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding-bottom: 30px !important;
+  padding-top: 30px !important;
+}
+
+.contact-content {
+  z-index: 11;
+  padding: 9rem 0 2rem !important;
+  color: whitesmoke;
+  text-align: center;
+}
+
+/* Container for the form */
+.contact-form-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Form itself */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input fields */
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Input focus effect */
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #26a6f6;
+  box-shadow: 0 0 8px rgba(38, 166, 246, 0.4);
+}
+
+/* Textarea adjustments */
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Submit button */
+.form-button {
+  background-color: #26a6f6;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.form-button:hover {
+  background-color: #1d8ed1;
+  transform: translateY(-2px);
+}
+
+/* Success message */
+.success-message {
+  text-align: center;
+  color: #26a6f6;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .contact-form-wrapper {
+    padding: 15px;
+  }
 }
