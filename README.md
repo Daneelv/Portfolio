@@ -28,7 +28,7 @@
 
 ```bash
 # Clone the repo
-git clone https://github.com/Daneelv/daneelv.github.io.git
+git clone https://github.com/Daneelv/Portfolio.git
 
 # Install dependencies
 npm install
