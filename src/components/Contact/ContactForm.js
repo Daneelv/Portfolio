@@ -147,8 +147,6 @@ export default function ContactForm() {
                       type="tel"
                       name="phone"
                       placeholder="Your Phone Number"
-                      pattern="^\+?[0-9\s\-()]{7,20}$"
-                      title="Enter a valid phone number, e.g., +27 82 123 4567 or 0821234567"
                       className="form-input"
                     />
                   </div>
