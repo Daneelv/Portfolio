@@ -27,7 +27,7 @@ function Projects() {
               isBlog={false}
               title="Shoply"
               description="A full-featured eCommerce platform with integrated payment gateways such as PayPal and Stripe. Developed using Next.js, Shadcn UI components, Zod, Prisma, PostgreSQL, and TypeScript."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
+              ghLink="https://github.com/Daneelv/Shoply"
               demoLink="shoply-tan.vercel.app/"
             />
           </Col>
